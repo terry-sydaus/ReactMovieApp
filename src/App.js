@@ -9,7 +9,7 @@ const App = () => {
   console.log('API key for TJM:', process.env.REACT_APP_TMDB_API_KEY);
   return (
     <BrowserRouter
-      basename='https://terry-sydaus.github.io/ReactMovieApp'
+      basename='/ReactMovieApp'
     >
       <div>
 	<Header />
