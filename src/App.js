@@ -6,7 +6,7 @@ import Movie from './movie/Movie';
 import NotFound from './NotFound';
 
 const App = () => {
-  console.log('API key for TJM:', process.env.REACT_APP_TMDB_API_KEY);
+  //console.log('API key for TJM:', process.env.REACT_APP_TMDB_API_KEY);
   return (
     <BrowserRouter
       basename='/ReactMovieApp'
