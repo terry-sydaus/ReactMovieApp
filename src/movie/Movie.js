@@ -34,8 +34,8 @@ class Movie extends React.Component {
     const backdropStyle = {
       backgroundImage: `url(${imgUrl})`
     };
-    console.log(title);
-    console.log(backdropStyle);
+    //console.log(title);
+    //console.log(backdropStyle);
 
     return (
       <div className='movie-page'>
