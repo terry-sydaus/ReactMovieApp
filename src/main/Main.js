@@ -53,7 +53,7 @@ class Main extends React.Component {
     if ( !savedState || (savedState && !savedState.movies.length)) {
     //console.log(this.props.url)
     this.fetchMovies(this.state.moviesUrl);
-    console.log('Mount component did mount');
+    // console.log('Mount component did mount');
     } else {
       this.setState({...savedState});
       this.generateUrl(savedState);
@@ -70,13 +70,13 @@ class Main extends React.Component {
    componentDidUpdate(prevProps, prevState, snapshot) {
     this.saveStateToLocalStorage();
 
-    console.log('Main component did update...');
+    //console.log('Main component did update...');
      //console.log(prevState);
      if ('moviesUrl' in prevState) {
 	if (this.state.moviesUrl !== prevState.moviesUrl) {
      //console.log('Main component did update...');
      //console.log(this.state.moviesUrl + '.....\r\n' + prevState.moviesUrl);
-	  console.log('Main component did update...--> moviesUrl change');
+	  // console.log('Main component did update...--> moviesUrl change');
 	  this.fetchMovies(this.state.moviesUrl);
 	}
      }
@@ -85,7 +85,7 @@ class Main extends React.Component {
 	if(this.state.page !== prevState.page) {
      //console.log('updated page number: ' + this.state.page
      // + '....previous page number: ' + prevState.page);
-     console.log('Main component did update...--> page change');
+     // console.log('Main component did update...--> page change');
       //console.log('page button pressed');
       //console.log(this.state.page + '.....' + nextState.page);
      this.generateUrl(this.state);
@@ -187,14 +187,14 @@ class Main extends React.Component {
       //this.setState({ page: nextPage }, this.generateUrl() );
       this.setState({ page: nextPage });
       //this.setState({ page: nextPage });
-      //    console.log(this.state.page);
+      //console.log(this.state.page);
     }
   }
 
   render() {
-    console.log('Main component render to v dom');
-    console.log('Page number for Main component render is ' +
-      this.state.page);
+    // console.log('Main component render to v dom');
+    // console.log('Page number for Main component render is ' +
+    //  this.state.page);
     return (
       <section className='main'>
 	<Navigation
